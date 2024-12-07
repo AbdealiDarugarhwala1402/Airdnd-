@@ -1,0 +1,483 @@
+body {
+    font-family: "Nunito Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+/* header */
+.main-heading {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Navbar Container */
+.navbar {
+    background-color: #ffffff; /* Solid background for the navbar */
+    border-bottom: 1px solid #ccc;
+    padding: 0.8rem 1rem;
+  }
+  
+  /* Navbar Logo */
+  .icon-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-text i {
+    color: rgb(175, 95, 175);
+    font-size: 1.8rem;
+    margin-right: 0.5rem;
+  }
+  
+  .logoname {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(175, 95, 175);
+  }
+  
+  /* Navbar Links */
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center links in the navbar */
+    width: 100%; /* Ensure the links take full width for centering */
+  }
+
+  .explore {
+    justify-content: flex-start;
+    width: fit-content;
+  }
+  
+  .navbar-nav a {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 1rem; /* Spacing between links */
+  }
+  
+  .navbar-nav a:hover {
+    color: rgb(175, 95, 175); /* Hover color */
+  }
+  
+  /* Navbar Links on the Right (Airdnd your home, Sign up, Log in, Logout) */
+  .navbar-nav.ms-auto {
+    justify-content: flex-end;
+  }
+  
+  .navbar-nav .btn-new {
+    background-color: rgb(175, 95, 175);
+    color: white;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+  }
+  
+  .navbar-nav .btn-new:hover {
+    background-color: rgb(160, 80, 160); /* Hover effect */
+  }
+  
+  /* Navbar Toggler Button */
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .nav-link {
+    text-align: center;
+  }
+  
+  /* For smaller screen sizes */
+  @media screen and (max-width: 767px) {
+    .navbar-nav {
+      display: block;
+      width: 100%;
+      text-align: center; /* Center links on small screens */
+    }
+  
+    .navbar-nav a {
+      margin: 1rem 0; /* Add vertical space between links on small screens */
+    }
+  
+    /* Toggle visibility of navbar items on mobile */
+    .navbar-collapse {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0; /* Align to the left edge */
+      width: 100%; /* Take up the full width */
+      background-color: rgba(255, 255, 255, 0.95); /* Solid background with slight transparency */
+      z-index: 1050; /* Ensure it's above other elements */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+      padding: 1rem 0; /* Padding for dropdown items */
+    }
+  
+    .navbar-toggler.collapsed + .navbar-collapse {
+      display: block;
+    }
+  }
+
+/* Search navbar */
+.btn-search {
+    border-radius: 25px !important;
+    padding: 0 1rem 0 1rem;
+}
+
+.btn-search i {
+    display: inline;
+    margin-right: 0.5rem;
+}
+
+.search-input {
+    border-radius: 25px;
+    padding: 0.5 3rem 0.5rem 3rem;
+}
+
+@media screen and (max-width: 1100px) {
+    .search-form {
+        display: none !important; /* Hide the search bar completely below 1100px */
+        height: 0; /* Remove any extra height */
+        margin: 0; /* Remove any margin */
+        padding: 0; /* Remove any padding */
+    }
+    .navbar-nav .ms-auto {
+        justify-content: flex-start; /* Align other links to the left */
+        margin-left: 0;
+    }
+
+}
+    
+/* footer */
+.f-info-links, .f-info-socials, .f-info-brand {
+    width: 100%;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.f-info-links { 
+    gap: 1.3rem;
+}
+
+.f-info-socials {
+    gap: 0.8rem;
+}
+
+.f-info-socials i {
+    font-size: 1.4rem;
+}
+
+.f-info-links a,i {
+    color: #222222;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.f-info-links i {
+    font-size: 0.1rem;
+    vertical-align: middle;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info {
+    text-align: center;
+    display: flex;
+    height: 7rem;
+    background-color: white !important;
+    flex-wrap: wrap;
+    align-items: space-evenly;
+}
+
+/* cards */
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text {
+    font-weight: 300 !important;
+    font-size: 1.2rem;
+    color: #222222;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+/* hover effect */
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    background-color: white;
+    opacity: 0.2;
+}
+
+.form-label, .btn-new {
+    font-size: 1rem;
+}
+
+.btn-new {
+    background-color: rgb(175, 95, 175);
+}
+
+.btn-new:hover {
+    background-color: rgb(175, 95, 175);
+    opacity: 0.8;    
+}
+
+/* show page */
+.show-img {
+    height: 40vh;
+}
+
+.btns {
+    display: flex;
+}
+
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.alert {
+    display: flex;
+    justify-content: center;
+}
+
+.text-muted {
+    font-size: 1rem;
+    color: #999999;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.fa-star {
+    color: rgb(214, 157, 13);
+}
+
+.review-cont {
+    padding: 0;
+}
+
+/* Default Styling */
+.filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Add horizontal scroll */
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+/* Hide the scrollbar but still allow scrolling */
+.filters::-webkit-scrollbar {
+    display: none;
+}
+
+.filter {
+    text-align: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.filter i {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.filter p {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+/* Display button */
+.tax-toggle {
+    border: 1px solid black;
+    border-radius: 0.6rem;
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+/* For small screen devices, ensure scrolling works */
+@media screen and (max-width: 767px) {
+    .filters {
+        overflow-x: auto; /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    .filter {
+        flex-shrink: 0; /* Prevent shrinking of filters */
+    }
+
+    .tax-toggle {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 100%; /* Take full width for small screens */
+    }
+}
+
+/* For tablets (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .filters {
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    .filter {
+        font-size: 0.9rem; /* Increase font size for medium screens */
+    }
+
+    .tax-toggle {
+        margin-top: 1rem;
+    }
+}
+
+/* For larger screens (1024px and up) */
+@media screen and (min-width: 1024px) {
+    .filters {
+        justify-content: space-between;
+        gap: 2rem; /* Increased gap for larger screens */
+    }
+
+    .filter {
+        font-size: 1rem; /* Standard font size for larger screens */
+    }
+
+    .tax-toggle {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+/* Login Page */
+/* Centering the heading */
+.login-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Center the login button */
+.login-form button[type="submit"] {
+    width: 100%; /* Make button take up full width */
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    background-color: rgb(13, 138, 77);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    display: block; /* Ensures button is block-level and centered */
+    margin-left: auto; /* Center button horizontally */
+    margin-right: auto; /* Center button horizontally */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+    .login-heading {
+        font-size: 1.5rem;
+    }
+
+    .form-control {
+        padding: 0.6rem;
+    }
+
+    .login-form button[type="submit"] {
+        padding: 1rem;
+    }
+}
+
+/* signup styling */
+/* Centering the signup heading */
+.sign-up-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Center the signup button */
+.sign-up-form button[type="submit"] {
+    width: 100%; /* Make button take up full width */
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    background-color: rgb(13, 138, 77);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    display: block; /* Ensures button is block-level and centered */
+    margin-left: auto; /* Center button horizontally */
+    margin-right: auto; /* Center button horizontally */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+    .sign-up-heading {
+        font-size: 1.5rem;
+    }
+
+    .form-control {
+        padding: 0.6rem;
+    }
+
+    .sign-up-form button[type="submit"] {
+        padding: 1rem;
+    }
+}
+
+
+
+
